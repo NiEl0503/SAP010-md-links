@@ -10,3 +10,11 @@ fs.readFile(path.resolve(filePath), (err, file) => {
         console.log(file.toString());
     }
 });
+
+fs.readdir(path.resolve(filePath),(err, file) => {
+  if(err) {
+    console.error(err)
+    throw Error(err)
+  }
+  console.log(file.toString());
+}) 
