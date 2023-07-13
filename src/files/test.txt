@@ -1,7 +1,0 @@
-Command-line arguments are simple parameters that are given on the system's command line.
-
-The first element of the process.argv array is always node.
-
- All elements of process.argv are strings and you may need to coerce them into numbers.
-
- You can do this by prefixing the property with + or passing it to Number().
