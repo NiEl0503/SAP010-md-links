@@ -1,10 +1,18 @@
-const mdLinks = require('../');
+// const { describe, it, expect } = require('@jest/globals');
+
+// const {
+//   mdLinks,
+//   readDirectory,
+//   filterMarkdownFiles,
+//   extractLinks,
+//   validateLinks,
+//   statsLinks, } = require('../src/index.js');
 
 
-describe('mdLinks', () => {
+// describe('mdLinks', () => {
 
-  it('should...', () => {
-    console.log('FIX ME!');
-  });
+//   it('should...', () => {
+//     console.log('FIX ME!');
+//   });
 
-});
+// });
