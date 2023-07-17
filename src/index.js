@@ -7,12 +7,17 @@ function mdLinks(filePath, options) {
   const absolutePath = path.resolve(filePath);
 
   return new Promise((resolve, reject) => {
-    readDirectory(absolutePath)
-      .then((files) => {
-        return filterMarkdownFiles(files);
-      })
-      .then((mdFiles) => {
-        return extractLinks(mdFiles, absolutePath);
+    fs.stat(absolutePath)
+      .then((stats) => {
+        if (stats.isFile()) {
+          return readFileContent(absolutePath);
+        } else if (stats.isDirectory()) {
+          return readDirectory(absolutePath)
+            .then((files) => filterMarkdownFiles(files))
+            .then((mdFiles) => extractLinks(mdFiles, absolutePath));
+        } else {
+          throw new Error(`El path "${absolutePath}" no es un archivo ni un directorio válido.`);
+        }
       })
       .then((links) => {
         if (links.length === 0) {
@@ -31,6 +36,10 @@ function mdLinks(filePath, options) {
         reject(error);
       });
   });
+}
+
+function readFileContent(filePath) {
+  return fs.readFile(filePath, 'utf8');
 }
 
 function readDirectory(dirPath) {
@@ -73,12 +82,12 @@ function validateLinks(links) {
       .then((response) => ({
         ...link,
         status: response.status,
-        ok: response.ok ? 'ok' : 'fail'
+        ok: response.ok,
       }))
       .catch(() => ({
         ...link,
-        status: 0,
-        ok: 'fail'
+        status: 404,
+        ok: false,
       }));
   });
 
@@ -91,14 +100,6 @@ function statsLinks(links) {
   const broken = links.filter((link) => link.ok === 'fail').length;
   return { total, unique, broken };
 }
-
-mdLinks('./src/files', { validate: true })
-  .then((links) => {
-    console.log(links);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
 
 module.exports = {
   mdLinks,
