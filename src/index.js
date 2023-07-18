@@ -5,7 +5,6 @@ const fetch = require('cross-fetch');
 function mdLinks(filePath, options) {
   const { validate } = options;
   const absolutePath = path.resolve(filePath);
-
   return new Promise((resolve, reject) => {
     fs.stat(absolutePath)
       .then((stats) => {
