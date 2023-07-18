@@ -6,6 +6,7 @@
 [Q&A - mdlinks] (https://www.youtube.com/watch?v=q3sDIyGgekE)
 [Segundo Deploy] (https://www.loom.com/share/7e4e4c40c5634dbea35e4a88694792ae)
 [Facebook] (https://www.facebook.com/)
+[Facebook] (https://www.facebook.com/)
 [Google] (https://www.google.com/)
 [Babel-quebrado] (https://bulnes.medium.com.como-colocar-o-babel-em-um-projeto-6a7f3322190b)
 [NodeSchool-quebrado] (https://nodes.chool.io/)

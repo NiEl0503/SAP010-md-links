@@ -97,7 +97,7 @@ function validateLinks(links) {
 function statsLinks(links) {
   const total = links.length;
   const unique = new Set(links.map((link) => link.href)).size;
-  const broken = links.filter((link) => link.ok === 'fail').length;
+  const broken = links.filter((link) => link.ok === false).length;
   return { total, unique, broken };
 }
 
