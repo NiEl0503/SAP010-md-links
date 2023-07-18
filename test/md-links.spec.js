@@ -12,7 +12,7 @@ describe('mdLinks', () => {
         const filePath = './test';
         const options = { validate: false };
         return mdLinks(filePath, options).then((links) => {
-          
+
             const expectedLinks = [
                 {
                     text: 'Link1',
@@ -27,7 +27,7 @@ describe('mdLinks', () => {
     });
 });
 
-it('deve rejeitar com erro se nenhum link for encontrado nos arquivos markdown', () => {
+    it('deve rejeitar com erro se nenhum link for encontrado nos arquivos markdown', () => {
     const filePath = './test/test.md';
     const options = { validate: false };
 
@@ -103,13 +103,13 @@ describe('validateLinks', () => {
     it('deve validar os links corretamente', () => {
         const links = [
             { text: 'Link1', href: 'https://link1.com', file: './caminho/de/diretório/arquivo1.md' },
-            { text: 'Link2', href: 'https://link2.com', file: './caminho/de/diretório/arquivo2.md'  },
+            { text: 'Link2', href: 'https://link2.com', file: './caminho/de/diretório/arquivo2.md' },
         ];
         const response1 = { status: 200, ok: true };
         const response2 = { status: 404, ok: false };
         const expectedValidatedLinks = [
-            { text: 'Link1', href: 'https://link1.com', file: './caminho/de/diretório/arquivo1.md' , ...response1 },
-            { text: 'Link2', href: 'https://link2.com', file: './caminho/de/diretório/arquivo2.md' , ...response2 },
+            { text: 'Link1', href: 'https://link1.com', file: './caminho/de/diretório/arquivo1.md', ...response1 },
+            { text: 'Link2', href: 'https://link2.com', file: './caminho/de/diretório/arquivo2.md', ...response2 },
         ];
 
         fetch.mockImplementation((url) => {
