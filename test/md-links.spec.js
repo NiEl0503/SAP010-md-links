@@ -8,10 +8,10 @@ jest.mock('cross-fetch', () => {
 });
 
 describe('mdLinks', () => {
-    it('deve retornar os links encontrados no arquivo Markdown "test.md"', () => {
-        const filePath = './test';
+    it('deve retornar os links encontrados no arquivo Markdown "test.md" ', () => {
+        const dirPath = './test';
         const options = { validate: false };
-        return mdLinks(filePath, options).then((links) => {
+        return mdLinks(dirPath, options).then((links) => {
 
             const expectedLinks = [
                 {
