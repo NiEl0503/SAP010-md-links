@@ -25,33 +25,38 @@ mdLinks(path, options)
 
 function printValidationAndStats(results) {
   const linkStats = statsLinks(results);
-  console.log('Total links: ' + linkStats.total);
-  console.log('Unique links: ' + linkStats.unique);
-  console.log('Broken links: ' + linkStats.broken);
+  console.log('\x1b[1m📊 Validation and Stats 📊\x1b[0m');
+  console.log('\x1b[1m\x1b[36m🔗 Total links:\x1b[0m', linkStats.total);
+  console.log('\x1b[1m\x1b[36m🧩 Unique links:\x1b[0m', linkStats.unique);
+  console.log('\x1b[1m\x1b[36m🚫 Broken links:\x1b[0m', linkStats.broken);
 }
 
 function printValidationResults(results) {
+  console.log('\x1b[1m🔍 Validation Results 🔍\x1b[0m');
   results.forEach((link) => {
-    console.log('File: ' + link.file);
-    console.log('Text: ' + link.text);
-    console.log('Link: ' + link.href);
-    console.log('Status HTTP: ' + link.status);
-    console.log('OK: ' + link.ok);
-    console.log('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨');
+    const statusMessage = link.ok ? '\x1b[32m✅ OK\x1b[0m' : '\x1b[31m❌ Quebrado\x1b[0m';
+    console.log('\x1b[36m📂 File:\x1b[0m \x1b[34m' + link.file + '\x1b[0m');
+    console.log('\x1b[36m📝 Text:\x1b[0m \x1b[34m' + link.text + '\x1b[0m');
+    console.log('\x1b[36m🔗 Href:\x1b[0m \x1b[34m' + link.href + '\x1b[0m');
+    console.log('\x1b[36m🔄 Status:\x1b[0m', link.status);
+    console.log('\x1b[36m👌 OK:\x1b[0m', statusMessage);
+    console.log('\x1b[37m════════════════════════════════\x1b[0m');
   });
-}
+};
 
 function printStats(results) {
   const linkStats = statsLinks(results);
-  console.log('Total links: ' + linkStats.total);
-  console.log('Unique links: ' + linkStats.unique);
+  console.log('\x1b[1m📊 Stats 📊\x1b[0m');
+  console.log('\x1b[36mTotal links: \x1b[34m' + linkStats.total + '\x1b[0m');
+  console.log('\x1b[36mUnique links: \x1b[34m' + linkStats.unique + '\x1b[0m');
 }
+
 
 function printLinks(results) {
   results.forEach((link) => {
-    console.log('File: ' + link.file);
-    console.log('Text: ' + link.text);
-    console.log('Link: ' + link.href);
-    console.log('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨');
+    console.log('\x1b[36m📂 File: ' + link.file + '\x1b[0m');
+    console.log('\x1b[35m📝 Text: ' + link.text + '\x1b[0m');
+    console.log('\x1b[34m🔗 Href: ' + link.href + '\x1b[0m');
+    console.log('\x1b[37m════════════════════════════════\x1b[0m');
   });
 }

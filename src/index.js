@@ -15,7 +15,7 @@ function mdLinks(filePath, options) {
             .then((files) => filterMarkdownFiles(files))
             .then((mdFiles) => extractLinks(mdFiles, absolutePath));
         } else {
-          throw new Error(`El path "${absolutePath}" no es un archivo ni un directorio válido.`);
+          throw new Error(`o caminho "${absolutePath}" não é um arquivo ou diretório válido.`);
         }
       })
       .then((links) => {
@@ -58,7 +58,6 @@ function filterMarkdownFiles(files) {
 function extractLinks(mdFiles, basePath) {
   const links = [];
   const regex = /\[([^\]]+)\]\s*\(([^)]+)\)/g;
-
   const promises = mdFiles.map((file) => {
     const filePath = path.join(basePath, file);
     return fs
@@ -71,7 +70,6 @@ function extractLinks(mdFiles, basePath) {
         }
       });
   });
-
   return Promise.all(promises).then(() => links);
 }
 
@@ -88,8 +86,7 @@ function validateLinks(links) {
         status: 404,
         ok: false,
       }));
-  });
-
+  });      
   return Promise.all(validatedLinks);
 }
 
