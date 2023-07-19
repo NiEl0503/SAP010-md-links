@@ -42,7 +42,7 @@ function printValidationResults(results) {
     console.log('\x1b[36m👌 OK:\x1b[0m', statusMessage);
     console.log('\x1b[37m════════════════════════════════\x1b[0m');
   });
-};
+}
 
 function printStats(results) {
   const linkStats = statsLinks(results);

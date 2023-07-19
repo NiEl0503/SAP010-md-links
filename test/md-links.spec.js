@@ -1,4 +1,4 @@
-const { mdLinks, readDirectory, filterMarkdownFiles, extractLinks, validateLinks } = require('../src/index.js')
+const { mdLinks, readDirectory, filterMarkdownFiles, extractLinks, validateLinks, statsLinks } = require('../src/index.js')
 const fs = require('fs').promises;
 const path = require('path');
 const fetch = require('cross-fetch');
@@ -126,3 +126,24 @@ describe('validateLinks', () => {
         });
     });
 });
+
+describe('statsLinks', () => {
+    test('deve retornar o item com as estatísticas corretas', () => {
+      const links = [
+        { href: 'https://example.com', ok: true },
+        { href: 'https://example.com', ok: true },
+        { href: 'https://example.com', ok: false },
+        { href: 'https://example2.com', ok: true },
+        { href: 'https://example3.com', ok: false },
+      ];
+  
+      const expectedStats = {
+        total: 5,
+        unique: 3,
+        broken: 2,
+      };
+  
+      const result = statsLinks(links);
+      expect(result).toEqual(expectedStats);
+    });
+  });
