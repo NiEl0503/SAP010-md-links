@@ -26,9 +26,9 @@ mdLinks(path, options)
 function printValidationAndStats(results) {
   const linkStats = statsLinks(results);
   console.log('\x1b[1m📊 Validation and Stats 📊\x1b[0m');
-  console.log('\x1b[1m\x1b[36m🔗 Total links:\x1b[0m', linkStats.total);
-  console.log('\x1b[1m\x1b[36m🧩 Unique links:\x1b[0m', linkStats.unique);
-  console.log('\x1b[1m\x1b[36m🚫 Broken links:\x1b[0m', linkStats.broken);
+  console.log('\x1b[1m\x1b[36m🔗 Total links:\x1b[34m', linkStats.total + '\x1b[0m');
+  console.log('\x1b[1m\x1b[36m🧩 Unique links:\x1b[34m', linkStats.unique + '\x1b[0m');
+  console.log('\x1b[1m\x1b[36m🚫 Broken links:\x1b[34m', linkStats.broken + '\x1b[0m');
 }
 
 function printValidationResults(results) {
@@ -47,8 +47,8 @@ function printValidationResults(results) {
 function printStats(results) {
   const linkStats = statsLinks(results);
   console.log('\x1b[1m📊 Stats 📊\x1b[0m');
-  console.log('\x1b[36mTotal links: \x1b[34m' + linkStats.total + '\x1b[0m');
-  console.log('\x1b[36mUnique links: \x1b[34m' + linkStats.unique + '\x1b[0m');
+  console.log('\x1b[36m🔗 Total links: \x1b[34m' + linkStats.total + '\x1b[0m');
+  console.log('\x1b[36m🧩 Unique links: \x1b[34m' + linkStats.unique + '\x1b[0m');
 }
 
 
