@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Prefácio](#1-prefácio)
+* [1. Resumo do projeto](#1-Resumo-do-projeto)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 * [4. Considerações gerais](#4-considerações-gerais)
@@ -15,7 +15,7 @@
 
 ***
 
-## 1. Prefácio
+## 1. Resumo do projeto
 
 Esta é uma biblioteca NodeJS que contém um extrator de links, recebe um caminho de arquivo no formato ".md" `Markdown` e retorna através do console uma lista de todos os links que o projeto contém, bem como a linha do arquivo onde está hospedado. Além disso, se a opção  `validate` for adicionada, você poderá verificar o caminho, o texto e o link; Se você colocar a opção de `stats`, poderá verificar se os links estão funcionando ou, caso contrário, estão "quebrados".
 
