@@ -28,6 +28,9 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
+  "bin": {
+    "md-links": "./src/md-links"
+  },
   "devDependencies": {
     "@jest/globals": "^29.6.1",
     "eslint": "^8.45.0",
