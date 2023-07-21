@@ -3,8 +3,8 @@
 ## Índice
 
 * [1. Resumo do projeto](#1-Resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
+* [2. Guia de instalação](#2-Guia-de-instalação)
+* [3.Guia de uso ](#3-Guia-de-uso)
 * [5. Critérios de aceitação mínimos do projeto](#5-criterios-de-aceitação-mínimos-do-projeto)
 * [6. Entregáveis](#6-entregáveis)
 
@@ -14,9 +14,13 @@
 
 Esta é uma biblioteca NodeJS que contém um extrator de links, recebe um caminho de arquivo no formato ".md" `Markdown` e retorna através do console uma lista de todos os links que o projeto contém, bem como a linha do arquivo onde está hospedado. Além disso, se a opção  `validate` for adicionada, você poderá verificar o caminho, o texto e o link; Se você colocar a opção de `stats`, poderá verificar se os links estão funcionando ou, caso contrário, estão "quebrados".
 
-## 2. Guia de uso
+## 2. Guia de instalação 📌
 
-## 3.
+Para instalar esta biblioteca você deve executar a seguinte linha de comando: npm i md-links-ninoska. Este módulo inclui um executável como uma interface que pode ser importada com require: const mdLinks = require('md-links-ninoska')
+
+Após a instalação, certifique de ter um arquivo .md com links dentro.
+
+## 3. Guia de uso 
 
 ## 4. 
 
