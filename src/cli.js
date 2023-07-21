@@ -1,28 +1,22 @@
-#! /usr/bin/env node
 const { mdLinks, statsLinks } = require('./index.js');
 
-const path = process.argv[2];
-const options = {
-  validate: process.argv.includes('--validate'),
-  stats: process.argv.includes('--stats'),
-  validateAndStats: process.argv.includes('--validate') && process.argv.includes('--stats'),
-};
-
-mdLinks(path, options)
-  .then((results) => {
-    if (options.validateAndStats) {
-      printValidationAndStats(results);
-    } else if (options.validate) {
-      printValidationResults(results);
-    } else if (options.stats) {
-      printStats(results);
-    } else {
-      printLinks(results);
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+function cli(path, options) {
+  mdLinks(path, options)
+    .then((results) => {
+      if (options.validateAndStats) {
+        printValidationAndStats(results);
+      } else if (options.validate) {
+        printValidationResults(results);
+      } else if (options.stats) {
+        printStats(results);
+      } else {
+        printLinks(results);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
 
 function printValidationAndStats(results) {
   const linkStats = statsLinks(results);
@@ -60,4 +54,8 @@ function printLinks(results) {
     console.log('\x1b[34m🔗 Href: ' + link.href + '\x1b[0m');
     console.log('\x1b[37m════════════════════════════════\x1b[0m');
   });
+}
+
+module.exports = {
+  cli
 }
