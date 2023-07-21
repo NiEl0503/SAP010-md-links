@@ -1,4 +1,4 @@
-# Markdown Links &nbsp; ![](https://komarev.com/ghpvc/?username=niel0503-mdLinks&color=blueviolet)
+# Markdown Links 
 
 ## Índice
 
@@ -22,7 +22,10 @@ Após a instalação, certifique de ter um arquivo .md com links dentro.
 
 ## 3. Guia de uso 
 
-## 4. 
+1
+
+
+## 4. Documentação técnica
 
 ## 5. Critérios de aceitação mínimos do projeto
 
