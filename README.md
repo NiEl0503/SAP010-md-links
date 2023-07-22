@@ -60,18 +60,16 @@ Exemplo:
 ![mdlinks](./src/assets/validateAndStats.png)
 
 
-## 5. Fluxograma ![image](https://github.com/NiEl0503/SAP010-md-links/assets/125376144/78851832-3268-4fed-9f9a-76b8b19c5529)
+## 5. Fluxograma 
+Fluxograma utilizado na realização deste projeto <br>
 
 
 ![fluxograma](./src/assets/flux.drawio.png)
 
 ## 6. Tecnologias Utilizadas
-
-
-
-## 7. Entregáveis
-
-
+<a href="https://www.javascript.com/"><img height= "35" src= "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></a>
+<a href="https://nodejs.org/en/"><img height= "35" src= "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
+<a href="https://git-scm.com/"><img height= "35" src= "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"></a>
 
 
 
