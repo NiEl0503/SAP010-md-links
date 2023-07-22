@@ -54,8 +54,7 @@ Exemplo:
 
 
 d) Também é possível combinar ´--validate´ e ´--stats´ para obter o número total de links, quantos são únicos e quantos estão quebrados.
-`md-links <caminho-do-arquivo> --validate --stats`. <br>
-Exemplo:
+Exemplo: `md-links <caminho-do-arquivo> --validate --stats`. <br>
 
 ![mdlinks](./src/assets/validateAndStats.png)
 
@@ -67,9 +66,10 @@ Fluxograma utilizado na realização deste projeto <br>
 ![fluxograma](./src/assets/flux.drawio.png)
 
 ## 6. Tecnologias Utilizadas
+<div align="center" dir="auto">
 <a href="https://www.javascript.com/"><img height= "35" src= "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></a>
 <a href="https://nodejs.org/en/"><img height= "35" src= "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
 <a href="https://git-scm.com/"><img height= "35" src= "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"></a>
-
+</div>
 
 
