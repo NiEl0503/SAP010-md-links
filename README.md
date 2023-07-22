@@ -23,20 +23,28 @@ Esta é uma biblioteca NodeJS que contém um extrator de links, recebe um caminh
 
 ## 3. Guia de instalação 📌
 
-Para instalar esta biblioteca você deve executar a seguinte linha de comando: <strong>`npm install md-links-ninoska`<strong> Este módulo inclui um executável como uma interface que pode ser importada com require.
+Para instalar esta biblioteca você deve executar a seguinte linha de comando: <strong>`npm install md-links-ninoska`</strong>. Este módulo inclui um executável como uma interface que pode ser importada com require.
 
 Após a instalação, certifique de ter um arquivo .md com links dentro.
 <br>
 
 ## 4. Guia de uso ⌨️
 
-a) Rode o comando <strong>`mdlinks` + o caminho do seu arquivo </strong>, para obter o retorno do caminho (file), texto (text) e o link do arquivo selecionado (href).
+a) Rode o comando <strong>`mdlinks` + o caminho do seu arquivo </strong>, para obter o retorno do caminho (file), texto (text) e o link do arquivo selecionado (href).<br>
+Exemplo:
+`md-links <caminho-do-arquivo>`
 
-![mdlinks](./src/assets/mdLinks.png)
+![mdlinks](./src/assets/mdLinks.png) <br>
 
-b) Se além de obter o caminho (file), o link (href) e o texto (text) você deseja realizar uma validação destes, utilize a propriedade <strong>--validate</strong>, para que desta forma obtenha o status da sua requisição HTTP (status) e uma mensagem com a aprovação ou rejeição do seu link (ok).
- <br>
+
+
+b) Se além de obter o caminho (file), o link (href) e o texto (text) você deseja realizar uma validação destes, utilize a propriedade <strong>--validate</strong>, para que desta forma obtenha o status da sua requisição HTTP (status) e uma mensagem com a aprovação ou rejeição do seu link (ok). <br>
+🔎  observação: se o link resultar em um redirecionamento a uma URL que responde ok, então consideraremos o link como ok.<br>
+Exemplo:
+ `md-links <caminho-do-arquivo> --validate`
+ 
 ![mdlinks](./src/assets/validate.png)
+
 
 c) 
 
