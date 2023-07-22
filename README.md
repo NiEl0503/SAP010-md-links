@@ -49,8 +49,15 @@ Exemplo:
 c) Se você quiser saber as estatísticas desses links, pode digitar a opção <strong>--stats</strong> e a saída será um texto com estatísticas básicas sobre os links, onde você encontrará as informações sobre o número total de links e quantos são únicos.<br>
 Exemplo:
 `md-links <caminho-do-arquivo> --stats`
+
 ![mdlinks](./src/assets/stats.png)
 
+
+d) Também é possível combinar ´--validate´ e ´--stats´ para obter o número total de links, quantos são únicos e quantos estão quebrados.
+`md-links <caminho-do-arquivo> --validate --stats`. <br>
+Exemplo:
+
+![mdlinks](./src/assets/stats.png)
 
 
 ## 4. Documentação técnica
