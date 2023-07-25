@@ -19,10 +19,6 @@ function mdLinks(filePath, options) {
         }
       })
       .then((links) => {
-        if (links.length === 0) {
-          reject(new Error('Nenhum link encontrado nos arquivos Markdown'));
-          return;
-        }
         if (validate) {
           return validateLinks(links);
         }
@@ -86,7 +82,7 @@ function validateLinks(links) {
         status: 404,
         ok: false,
       }));
-  });      
+  });
   return Promise.all(validatedLinks);
 }
 
