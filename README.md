@@ -8,6 +8,8 @@
 * [4.Guia de uso ](#3-Guia-de-uso)
 * [5. Fluxograma](#5-Fluxograma)
 * [6. Tecnologias Utilizadas](#6-Tecnologias-utilizadas)
+* [7. Ferramenta  de organização](#7-Ferramenta-de-organização)
+* [8. Testes](#8-Testes)
 
 ***
 
@@ -71,5 +73,23 @@ Fluxograma utilizado na realização deste projeto <br>
 <a href="https://nodejs.org/en/"><img height= "35" src= "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
 <a href="https://git-scm.com/"><img height= "35" src= "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"></a>
 </div>
+
+
+## 7. Ferramenta  de organização
+
+Para a organização deste projeto, trabalhe com o Github Project.<br>
+Dividi cada Milestone em um sprint e, por sua vez, dentro de cada sprint, diferentes issues foram criados
+
+![Github-project](./src/assets/backlog.png)
+<br>
+
+![sprint](./src/assets/sprint.png)
+
+
+## 8. Testes 
+
+Para realizar os testes, trabalhe com Jest, que é uma estrutura de teste unitário  de código aberto em JavaScript, obtendo os seguintes resultados: <br>
+
+![Teste](./src/assets/testes.png)
 
 
